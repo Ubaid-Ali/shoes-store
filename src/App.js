@@ -3,7 +3,7 @@ import './App.css';
 
 import {
   BrowserRouter as Router,
-  Routes, Link, Switch, Route
+  Routes, Route
 } from 'react-router-dom';
 
 // Import Components
@@ -12,7 +12,7 @@ import Products from './components/products'
 import About from './components/about'
 import NotFound from './components/notFound'
 import NavBar from './components/navBar';
-
+import ProductItem from './components/productItem';
 
 
 function App() {
@@ -21,8 +21,9 @@ function App() {
       <NavBar />
       <Routes>
         <Route path='/' element={<Home />} />
-        <Route path='/products' element={<Products />} />
-        <Route path='/about' element={<About />} />
+        <Route exact path='products' element={<Products />} />
+        <Route path='products/:id' element={<ProductItem />} />
+        <Route path='about' element={<About />} />
         <Route path='*' element={<NotFound />} />
       </Routes>
     </Router>

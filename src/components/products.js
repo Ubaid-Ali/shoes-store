@@ -12,18 +12,11 @@ import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
-import { ListItemText } from '@material-ui/core';
 
-// const useStyles = makeStyles({
-//     root: {
-//         maxWidth: 345,
-//         textAlign: 'center'
-//     },
-//     media: {
-//         height: 140,
-//     },
 
-// });
+
+
+import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({
     gridRoot: {
@@ -33,7 +26,8 @@ const useStyles = makeStyles((theme) => ({
         padding: theme.spacing(2),
         color: theme.palette.text.secondary,
         display: 'flex',
-        justifyContent: "space-around" 
+        justifyContent: "space-around",
+        TextDecoderation: 'none'
     },
 
     root: {
@@ -44,7 +38,7 @@ const useStyles = makeStyles((theme) => ({
     media: {
         height: 140,
     },
-    nameP:{
+    nameP: {
         rowGap: '5px'
     }
 
@@ -52,7 +46,6 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const Products = () => {
-
     const classes = useStyles();
 
     return (
@@ -62,35 +55,37 @@ const Products = () => {
                 {Object.keys(Shoes).map(arrVal => {
                     const shoes = Shoes[arrVal];
                     return (
-                        <Grid keys={shoes.name} item xs={12} sm={6}>
-                            <Paper className={classes.paper}>
 
-                                <Card className={classes.root}>
-                                    <CardActionArea>
-                                        <CardMedia
-                                            className={classes.media}
-                                            image={shoes.img[0]}
-                                            title={shoes.name}
-                                        />
-                                        <CardContent>
-                                            <Typography gutterBottom variant="h5" component="h2">
-                                                ${shoes.price}
-                                            </Typography>
-                                            <Typography variant="body2" color="textSecondary" component="p" className={classes.nameP}>{shoes.name}</Typography>
-                                        </CardContent>
-                                    </CardActionArea>
+                        <Grid key={Math.random()} item xs={12} sm={6}>
+                            <Link to={`/products/${arrVal}`} className="products-link">
+                                <Paper className={classes.paper}>
 
-                                    <CardActions>
-                                        <Button size="small" color="primary">
-                                            +
-                                        </Button>
-                                        <Button size="small" color="primary">
-                                            Detail
-                                        </Button>
-                                    </CardActions>
-                                </Card>
+                                    <Card className={classes.root}>
+                                        <CardActionArea>
+                                            <CardMedia
+                                                className={classes.media}
+                                                image={shoes.img[0]}
+                                                title={shoes.name}
+                                            />
+                                            <CardContent>
+                                                <Typography gutterBottom variant="h5" component="h2">
+                                                    ${shoes.price}
+                                                </Typography>
+                                                <Typography variant="body2" color="textSecondary" component="p" className={classes.nameP}>
+                                                    {shoes.name}
+                                                </Typography>
+                                            </CardContent>
+                                        </CardActionArea>
 
-                            </Paper>
+                                        <CardActions>
+                                            <Button size="small" color="primary">
+                                                
+                                            </Button>
+                                        </CardActions>
+                                    </Card>
+
+                                </Paper>
+                            </Link>
                         </Grid>
                     )
                 })}
@@ -100,16 +95,3 @@ const Products = () => {
 }
 
 export default Products
-
-
-{/* <h1>Products Page</h1>
-            {Object.keys(Shoes).map(arrItem => {
-                console.log(arrItem)
-                const shoe = Shoes[arrItem]
-                return (
-                    <div className='items' key={arrItem}>
-                        <h2>{shoe.name}</h2>
-                        <img src={shoe.img} height='200px' />
-                    </div>
-                )
-            })} */}

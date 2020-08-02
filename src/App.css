@@ -3,30 +3,35 @@
 }
 
 .app-ul {
+
   text-decoration: none;
   list-style: none;
-  background-color: lightcyan;
+  background-color: #003d33;
   display: flex;
-  justify-content: space-around;
+  justify-content: last baseline;
   font-weight: bold;
-  padding: 1%;
-  color: white;
+  padding: 1.5%;
+  color: #003d33;
 }
 
 .app-ul li {
-  padding: 0 2%;
-  color: lightgrey;
+  text-decoration: none;
+  padding: 0 1%;
+}
+
+.link-li{
+  text-decoration: none;  
 }
 
 .home{
+  padding: 15px;
   display: flex;
   justify-content: space-around;
 }
 
 .products{
   text-align: center;
-  /* display: flex;
-  justify-content: space-around; */
+  margin-top: 10%;
 }
 
 .items {
@@ -34,11 +39,15 @@
   border-radius: 5px;
 }
 
-.items img{
-
+.products-link{
+  text-decoration: none;
+}
+.about{
+  display: flex;
+  justify-content: space-around;
 }
 
-.about{
+.ind-shoe-div{
   display: flex;
   justify-content: space-around;
 }
