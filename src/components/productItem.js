@@ -45,9 +45,7 @@ const useStyles = makeStyles((theme) => ({
 
 }));
 
-let buy = {};
 
-//
 export default function ProductItem() {
     const classes = useStyles();
 
@@ -75,7 +73,7 @@ export default function ProductItem() {
                         </div>
                         <h2> ${shoe.price} </h2>
                         <p>{shoe.name}</p>
-                            <IconButton className={classes.iconButton} aria-label="add to shopping cart" onClick={() => buy = shoe}>
+                            <IconButton className={classes.iconButton} aria-label="add to shopping cart">
                                 <AddShoppingCartIcon />
                             </IconButton>
                         <p>{shoe.detail}</p>
@@ -86,11 +84,5 @@ export default function ProductItem() {
             </div>
         </div>
     );
-}
-
-// exporting object to cart
-export const buyFnc = () => {
-    console.log(buy)
-    return buy
 }
 

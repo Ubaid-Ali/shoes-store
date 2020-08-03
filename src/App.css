@@ -52,6 +52,11 @@
   justify-content: space-around;
 }
 
+.footer-h4{
+  text-align: center;
+  color: #003d33;
+}
+
 /* 
 .App-header {
   background-color: #282c34;
