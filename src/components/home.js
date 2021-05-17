@@ -17,7 +17,7 @@ const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 let arr = Object.keys(Shoes);
 const tutorialSteps = arr.map((name) => {
   const shoe = Shoes[name];
-  console.log(shoe);
+  // console.log(shoe);
   return {
     label: shoe.name,
     imgPath: `${shoe.img[0]}`,
@@ -83,9 +83,9 @@ function Home() {
           <div className={classes.root}>
             <Paper square elevation={0} className={classes.header}>
               <Typography>
-                <h3 className={classes.name}>
+                <span className={classes.name}>
                   {tutorialSteps[activeStep].label}
-                </h3>
+                </span>
               </Typography>
             </Paper>
             <AutoPlaySwipeableViews
