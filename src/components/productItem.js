@@ -33,7 +33,7 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "center",
   },
   sidebars: {
-    backgroundColor: "#003d33",
+    background: "linear-gradient(45deg, rgb(164, 156, 238), blue)"
   },
   heading: {
     color: "#003d33",

@@ -3,15 +3,14 @@
 }
 
 .app-ul {
-
   text-decoration: none;
   list-style: none;
-  background-color: #003d33;
   display: flex;
   justify-content: last baseline;
   font-weight: bold;
   padding: 1.5%;
   color: #003d33;
+  background: linear-gradient(45deg, rgb(164, 156, 238), blue);
 }
 
 .app-ul li {
@@ -20,7 +19,7 @@
 }
 
 .link-li{
-  text-decoration: none;  
+  text-decoration: none;
 }
 
 .home{
@@ -53,31 +52,10 @@
 }
 
 .footer-h4{
-  text-align: center;
-  color: #003d33;
-}
-
-/* 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background: linear-gradient(45deg, rgb(164, 156, 238), blue);
   color: white;
-} */
-
-/* .App-link {
-  color: #61dafb;
+  text-align: center;
+  bottom: 0;
+  padding: 50px;
+  font-size: 20px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-} */

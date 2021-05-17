@@ -26,7 +26,7 @@ function App() {
         <Route path='about' element={<About />} />
         <Route path='*' element={<NotFound />} />
       </Routes>
-      <h4 className='footer-h4'> © abcxyz.com, Inc. All rights reserved.</h4>
+      <h4 className='footer-h4'> © shoes-web.com, Inc. All rights reserved.</h4>
     </Router>
 
   );

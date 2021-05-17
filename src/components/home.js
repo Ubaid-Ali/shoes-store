@@ -56,13 +56,6 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "center",
     color: theme.palette.text.secondary,
   },
-  bestShoes: {
-    textAlign: "center",
-    color: "#003d33",
-    backgroundColor: "lightgrey",
-    padding: "1% 0",
-    boxShadow: "0 0 5px black",
-  },
 }));
 
 function Home() {
@@ -86,7 +79,6 @@ function Home() {
   return (
     <Grid container spacing={1}>
       <Grid item xs={12}>
-        <h2 className={classes.bestShoes}>BEST SHOES OF THE YEAR</h2>
         <Paper className={classes.paper2}>
           <div className={classes.root}>
             <Paper square elevation={0} className={classes.header}>
